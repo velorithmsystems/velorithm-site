@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Velorithm Systems Ltd — Engineering Intelligence. Accelerating Enterprise.</title>
+<meta name="description" content="Velorithm Systems is a global IT consulting and solutions provider — digital transformation, enterprise architecture, and AI-native products that accelerate the enterprise." />
+<meta name="theme-color" content="#100F0D" />
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Velorithm Systems" />
+<meta property="og:title" content="Velorithm Systems — Engineering Intelligence. Accelerating Enterprise." />
+<meta property="og:description" content="Global IT consulting and AI-native solutions. From strategy to system — at velocity." />
+<meta property="og:url" content="https://velorithmsystems.com" />
+<meta property="og:image" content="https://velorithmsystems.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Velorithm Systems — Engineering Intelligence. Accelerating Enterprise." />
+<meta name="twitter:description" content="Global IT consulting and AI-native solutions. From strategy to system — at velocity." />
+<meta name="twitter:image" content="https://velorithmsystems.com/og-image.png" />
+<link rel="canonical" href="https://velorithmsystems.com" />
+
+<!-- Favicon (muted V mark) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23161412'/%3E%3Cpath d='M9 9 L16 23 L23 9' fill='none' stroke='%23D9A441' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='9' cy='9' r='2.2' fill='%23E8C170'/%3E%3Ccircle cx='23' cy='9' r='2.2' fill='%23E8C170'/%3E%3Ccircle cx='16' cy='23' r='2.4' fill='%23C2682F'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org","@type":"Organization","name":"Velorithm Systems Ltd",
+  "url":"https://velorithmsystems.com","slogan":"Engineering Intelligence. Accelerating Enterprise.",
+  "description":"Global IT consulting and AI-native solutions provider."
+}
+</script>
+
+<style>
+  :root{
+    --bg:#100F0D;
+    --bg-2:#0A0908;
+    --surface:#1A1815;
+    --surface-2:#211E1A;
+    --amber:#D9A441;
+    --amber-light:#E8C170;
+    --orange:#C2682F;
+    --text:#F2EEE8;
+    --muted:#8E8478;
+    --muted-2:#6E665B;
+    --border:rgba(217,164,65,.12);
+    --border-hover:rgba(217,164,65,.4);
+    --maxw:1200px;
+    --display:'Space Grotesk',system-ui,sans-serif;
+    --body:'IBM Plex Sans',system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;scroll-padding-top:90px;}
+  body{
+    background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.65;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative;
+  }
+  body::after{
+    content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.025;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  a{color:inherit;text-decoration:none;}
+  img,svg{display:block;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  h1,h2,h3,h4,.logo-text{font-family:var(--display);font-weight:600;line-height:1.06;letter-spacing:-.02em;}
+
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--body);font-weight:500;font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--amber);}
+  .eyebrow::before{content:'';width:26px;height:1px;background:linear-gradient(90deg,var(--amber),transparent);}
+
+  .section{padding:130px 0;position:relative;}
+  .section .idx{position:absolute;top:78px;right:28px;font-family:var(--display);font-weight:700;font-size:clamp(4rem,11vw,9rem);color:rgba(217,164,65,.045);letter-spacing:-.04em;line-height:1;pointer-events:none;user-select:none;z-index:0;}
+  .section > .wrap{position:relative;z-index:1;}
+  .section-head{max-width:660px;margin-bottom:62px;}
+  .section-head h2{font-size:clamp(2.1rem,4.6vw,3.3rem);margin:18px 0 18px;}
+  .section-head p{color:#c4bcb0;font-size:1.08rem;}
+
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--body);font-weight:600;font-size:.96rem;padding:14px 26px;border-radius:4px;cursor:pointer;border:1px solid transparent;transition:transform .25s,box-shadow .25s,background .25s,border-color .25s,color .25s,opacity .25s;}
+  .btn-primary{background:linear-gradient(135deg,var(--amber-light),var(--amber));color:#1a160d;box-shadow:0 10px 30px -12px rgba(217,164,65,.5);}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 16px 40px -12px rgba(217,164,65,.62);}
+  .btn-primary[disabled]{opacity:.6;cursor:not-allowed;transform:none;}
+  .btn-ghost{background:transparent;border-color:var(--border-hover);color:var(--text);}
+  .btn-ghost:hover{transform:translateY(-3px);background:rgba(217,164,65,.07);border-color:var(--amber);}
+
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s,border-color .3s,backdrop-filter .3s;border-bottom:1px solid transparent;}
+  header.nav.scrolled{background:rgba(16,15,13,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:84px;}
+  .brand{display:flex;align-items:center;gap:13px;}
+  .brand .mark{width:38px;height:38px;flex:none;}
+  .logo-text{display:flex;flex-direction:column;line-height:1;}
+  .logo-text .a{font-size:1.28rem;font-weight:700;color:var(--text);letter-spacing:-.03em;}
+  .logo-text .b{font-size:.6rem;font-weight:500;letter-spacing:.34em;color:var(--amber);font-family:var(--body);margin-top:3px;}
+  .nav-links{display:flex;align-items:center;gap:36px;}
+  .nav-links a:not(.btn){font-size:.93rem;color:#c9c0b4;font-weight:500;position:relative;transition:color .2s;}
+  .nav-links a:not(.btn):hover{color:var(--text);}
+  .nav-links a:not(.btn)::after{content:'';position:absolute;left:0;bottom:-7px;height:2px;width:0;background:linear-gradient(90deg,var(--amber),var(--orange));transition:width .25s;}
+  .nav-links a:not(.btn):hover::after{width:100%;}
+  .hamburger{display:none;background:none;border:0;cursor:pointer;width:44px;height:44px;}
+  .hamburger span{display:block;width:24px;height:2px;background:var(--text);margin:5px auto;border-radius:2px;transition:transform .3s,opacity .3s;}
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .hamburger.open span:nth-child(2){opacity:0;}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  .dots{position:fixed;left:26px;top:50%;transform:translateY(-50%);z-index:90;display:flex;flex-direction:column;gap:18px;}
+  .dots a{display:flex;align-items:center;gap:12px;color:var(--muted-2);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500;}
+  .dots a .pip{width:9px;height:9px;border-radius:50%;border:1.5px solid var(--muted-2);transition:all .3s;}
+  .dots a .lbl{opacity:0;transform:translateX(-6px);transition:all .3s;white-space:nowrap;}
+  .dots a:hover .lbl,.dots a.active .lbl{opacity:1;transform:none;color:var(--text);}
+  .dots a.active .pip{background:var(--amber);border-color:var(--amber);box-shadow:0 0 10px rgba(217,164,65,.6);}
+  @media(max-width:1340px){.dots{display:none;}}
+
+  .hero{min-height:100vh;display:flex;align-items:center;padding-top:84px;overflow:hidden;position:relative;}
+  .hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(50% 50% at 78% 28%, rgba(194,104,47,.12), transparent 62%),radial-gradient(46% 46% at 12% 88%, rgba(217,164,65,.09), transparent 60%);}
+  .hero-grid{position:absolute;inset:0;z-index:0;opacity:.45;background-image:linear-gradient(rgba(217,164,65,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(217,164,65,.04) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(circle at 60% 40%,#000 30%,transparent 78%);mask-image:radial-gradient(circle at 60% 40%,#000 30%,transparent 78%);animation:drift 26s linear infinite;}
+  @keyframes drift{to{background-position:56px 56px;}}
+  .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;width:100%;}
+  .hero-copy .pill{display:inline-flex;align-items:center;gap:9px;font-size:.78rem;font-weight:500;color:#d3cabd;background:rgba(217,164,65,.05);border:1px solid var(--border);padding:7px 15px;border-radius:100px;margin-bottom:26px;}
+  .hero-copy .pill .dot{width:7px;height:7px;border-radius:50%;background:var(--amber);box-shadow:0 0 10px rgba(217,164,65,.7);}
+  .hero h1{font-size:clamp(2.7rem,6vw,4.7rem);font-weight:700;margin-bottom:24px;}
+  .hero h1 .grad{background:linear-gradient(115deg,var(--amber-light),var(--orange));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .hero .lead{font-size:clamp(1.05rem,2vw,1.28rem);color:#c4bcb0;max-width:560px;margin-bottom:34px;}
+  .hero-cta{display:flex;gap:15px;flex-wrap:wrap;margin-bottom:42px;}
+  .trio{display:flex;gap:0;border-top:1px solid var(--border);padding-top:24px;}
+  .trio div{flex:1;}
+  .trio div:not(:last-child){border-right:1px solid var(--border);}
+  .trio .t{font-family:var(--display);font-weight:600;font-size:1.02rem;color:var(--text);letter-spacing:.01em;}
+  .trio .s{font-size:.74rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-top:4px;}
+  .hero-art{display:flex;justify-content:center;align-items:center;}
+  .hero-art svg{width:100%;max-width:440px;height:auto;}
+
+  .pulse{stroke-dasharray:36 240;stroke-dashoffset:276;animation:run 4s cubic-bezier(.6,0,.4,1) infinite;}
+  .pulse.two{animation-delay:2s;}
+  @keyframes run{to{stroke-dashoffset:0;}}
+  .ring-rot{transform-origin:200px 200px;animation:spin 44s linear infinite;}
+  @keyframes spin{to{transform:rotate(360deg);}}
+  .node-b{animation:beat 3.4s ease-in-out infinite;transform-origin:center;}
+  @keyframes beat{0%,100%{opacity:.5;}50%{opacity:.95;}}
+
+  .bento{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:200px;gap:18px;}
+  .tile{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:30px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s;display:flex;flex-direction:column;}
+  .tile:hover{transform:translateY(-5px);border-color:var(--border-hover);box-shadow:0 26px 50px -28px rgba(0,0,0,.8);}
+  .tile::before{content:'';position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--amber),var(--orange));transform:scaleX(0);transform-origin:left;transition:transform .35s;}
+  .tile:hover::before{transform:scaleX(1);}
+  .tile .ico{width:46px;height:46px;border-radius:11px;display:grid;place-items:center;margin-bottom:auto;background:linear-gradient(135deg,rgba(217,164,65,.14),rgba(194,104,47,.12));border:1px solid rgba(217,164,65,.22);}
+  .tile .ico svg{width:23px;height:23px;stroke:var(--amber-light);}
+  .tile h3{font-size:1.22rem;margin:22px 0 8px;}
+  .tile p{color:#b9b0a4;font-size:.96rem;}
+  .tile.feature{grid-column:span 4;grid-row:span 2;background:linear-gradient(155deg,var(--surface-2),#15120F);}
+  .tile.feature h3{font-size:1.7rem;}
+  .tile.feature p{font-size:1.05rem;max-width:80%;}
+  .tile.feature .ico{width:54px;height:54px;}
+  .tile.feature .ico svg{width:27px;height:27px;}
+  .tile.s2{grid-column:span 2;}
+  .tile.wide{grid-column:span 6;grid-row:span 1;flex-direction:row;align-items:center;gap:24px;}
+  .tile.wide .ico{margin-bottom:0;}
+  .tile.wide .txt h3{margin-top:0;}
+
+  .prod-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+  .dossier{background:linear-gradient(160deg,var(--surface),#15120E);border:1px solid var(--border);border-radius:18px;padding:38px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s;}
+  .dossier:hover{transform:translateY(-6px);border-color:var(--border-hover);box-shadow:0 32px 60px -30px rgba(0,0,0,.85);}
+  .dossier .pcode{font-family:var(--display);font-size:.78rem;letter-spacing:.2em;color:var(--muted);margin-bottom:16px;}
+  .dossier .visual{height:120px;border-radius:12px;margin-bottom:24px;border:1px solid var(--border);background:radial-gradient(circle at 30% 30%,rgba(217,164,65,.1),transparent 60%),#161310;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .dossier .visual svg{width:100%;height:100%;}
+  .phead{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px;}
+  .phead h3{font-size:1.55rem;}
+  .badge{font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:5px 11px;border-radius:100px;}
+  .badge.flag{color:#1a160d;background:linear-gradient(135deg,var(--amber-light),var(--amber));}
+  .badge.soon{color:var(--amber-light);background:rgba(217,164,65,.1);border:1px solid rgba(217,164,65,.32);}
+  .dossier .lead{color:#c4bcb0;margin-bottom:22px;font-size:1.02rem;}
+  .feat{list-style:none;display:grid;gap:12px;}
+  .feat li{display:flex;gap:11px;align-items:flex-start;color:#c9c0b4;font-size:.95rem;}
+  .feat li svg{width:18px;height:18px;flex:none;margin-top:2px;stroke:var(--amber);}
+  .dossier .pcta{margin-top:26px;}
+
+  .why{background:linear-gradient(180deg,var(--bg),#0B0A09);}
+  .ledger{border-top:1px solid var(--border);}
+  .lrow{display:grid;grid-template-columns:90px 1fr 1.4fr;gap:24px;align-items:center;padding:34px 12px;border-bottom:1px solid var(--border);position:relative;transition:padding-left .3s,background .3s;}
+  .lrow::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--amber),var(--orange));transform:scaleY(0);transform-origin:top;transition:transform .35s;}
+  .lrow:hover{padding-left:26px;background:rgba(217,164,65,.022);}
+  .lrow:hover::before{transform:scaleY(1);}
+  .lrow .n{font-family:var(--display);font-weight:700;font-size:2.2rem;color:rgba(217,164,65,.32);}
+  .lrow:hover .n{color:var(--amber);}
+  .lrow h3{font-size:1.35rem;}
+  .lrow p{color:#b9b0a4;font-size:.98rem;}
+
+  .contact-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:58px;align-items:start;}
+  .contact-left h2{font-size:clamp(2rem,4vw,2.9rem);margin:18px 0 18px;}
+  .contact-left p{color:#c4bcb0;margin-bottom:30px;font-size:1.05rem;}
+  .info{display:grid;gap:15px;}
+  .info .item{display:flex;gap:13px;align-items:center;color:#c9c0b4;font-size:.97rem;}
+  .info .item svg{width:19px;height:19px;stroke:var(--amber);flex:none;}
+  form{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:38px;}
+  .field{margin-bottom:20px;}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  label{display:block;font-size:.82rem;font-weight:500;color:#c9c0b4;margin-bottom:8px;}
+  input,select,textarea{width:100%;background:#13110E;border:1px solid var(--border);border-radius:8px;padding:13px 15px;color:var(--text);font-family:var(--body);font-size:.96rem;transition:border-color .2s,box-shadow .2s;}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--amber);box-shadow:0 0 0 3px rgba(217,164,65,.15);}
+  textarea{resize:vertical;min-height:120px;}
+  select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238E8478' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 15px center;}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+  form .btn-primary{width:100%;justify-content:center;margin-top:6px;}
+  .form-note{font-size:.78rem;color:var(--muted);margin-top:14px;text-align:center;}
+  .form-msg{display:none;border-radius:8px;padding:14px;margin-bottom:18px;font-size:.92rem;}
+  .form-msg.ok{display:block;background:rgba(217,164,65,.1);border:1px solid rgba(217,164,65,.32);color:var(--amber-light);}
+  .form-msg.err{display:block;background:rgba(194,104,47,.12);border:1px solid rgba(194,104,47,.4);color:#e0a07a;}
+
+  footer{border-top:1px solid var(--border);padding:66px 0 32px;background:#0B0A09;}
+  .foot-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px;}
+  .foot-brand p{color:var(--muted);font-size:.94rem;margin-top:18px;max-width:300px;}
+  .foot-col h4{font-family:var(--body);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2);margin-bottom:16px;}
+  .foot-col a{display:block;color:#b9b0a4;font-size:.94rem;margin-bottom:11px;transition:color .2s;}
+  .foot-col a:hover{color:var(--amber);}
+  .foot-bottom{display:flex;align-items:center;justify-content:space-between;padding-top:28px;border-top:1px solid var(--border);flex-wrap:wrap;gap:16px;}
+  .foot-bottom p{color:var(--muted-2);font-size:.86rem;}
+  .socials{display:flex;gap:11px;}
+  .socials a{width:38px;height:38px;border-radius:9px;display:grid;place-items:center;background:rgba(217,164,65,.04);border:1px solid var(--border);transition:all .25s;}
+  .socials a:hover{border-color:var(--border-hover);background:rgba(217,164,65,.09);transform:translateY(-3px);}
+  .socials a svg{width:17px;height:17px;stroke:#c9c0b4;fill:none;}
+
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);}
+  .reveal.visible{opacity:1;transform:none;}
+  .d1{transition-delay:.08s;}.d2{transition-delay:.16s;}.d3{transition-delay:.24s;}
+
+  @media(max-width:980px){
+    .hero-inner{grid-template-columns:1fr;gap:30px;}
+    .hero-art{order:-1;max-width:320px;margin:0 auto;}
+    .contact-grid{grid-template-columns:1fr;gap:40px;}
+    .prod-grid{grid-template-columns:1fr;}
+    .foot-top{grid-template-columns:1fr 1fr;gap:32px;}
+    .section{padding:96px 0;}
+    .bento{grid-auto-rows:auto;}
+    .tile.feature,.tile.s2,.tile.wide{grid-column:span 3;grid-row:auto;}
+    .tile.wide{flex-direction:row;}
+  }
+  @media(max-width:680px){
+    .nav-links{position:fixed;top:84px;left:0;right:0;flex-direction:column;align-items:stretch;background:rgba(16,15,13,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--border);padding:24px;gap:18px;transform:translateY(-135%);transition:transform .35s;box-shadow:0 30px 50px -20px rgba(0,0,0,.7);}
+    .nav-links.open{transform:translateY(0);}
+    .hamburger{display:block;}
+    .bento{grid-template-columns:1fr;}
+    .tile.feature,.tile.s2,.tile.wide{grid-column:span 1;}
+    .tile.wide{flex-direction:column;align-items:flex-start;}
+    .lrow{grid-template-columns:60px 1fr;gap:14px;}
+    .lrow p{grid-column:1 / -1;}
+    .frow{grid-template-columns:1fr;}
+    .trio{flex-wrap:wrap;gap:18px;}
+    .trio div{flex:1 1 40%;border-right:0 !important;}
+    .foot-top{grid-template-columns:1fr;}
+    form{padding:26px;}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    .pulse,.ring-rot,.node-b,.hero-grid{animation:none;}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="vg" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0%" stop-color="#EAD08A"/><stop offset="48%" stop-color="#D9A441"/><stop offset="100%" stop-color="#C2682F"/>
+    </linearGradient>
+    <radialGradient id="ng" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FBF3DF"/><stop offset="55%" stop-color="#E8C170"/><stop offset="100%" stop-color="#C2682F"/>
+    </radialGradient>
+  </defs>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#hero" class="brand" aria-label="Velorithm Systems home">
+      <svg class="mark" viewBox="0 0 120 120" aria-hidden="true">
+        <rect x="6" y="6" width="108" height="108" rx="30" fill="#1A1512" stroke="#D9A441" stroke-opacity=".26" stroke-width="1.4"/>
+        <path d="M40 36 L60 84 L80 36" fill="none" stroke="url(#vg)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="40" cy="36" r="5" fill="url(#ng)"/><circle cx="80" cy="36" r="5" fill="url(#ng)"/>
+        <circle cx="60" cy="84" r="6" fill="url(#ng)"/><circle cx="60" cy="84" r="2.4" fill="#FBF3DF"/>
+      </svg>
+      <span class="logo-text"><span class="a">Velorithm</span><span class="b">SYSTEMS LTD</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#products">Products</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact" class="btn btn-primary">Book a Consultation</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="dots" id="dots" aria-label="Section navigation">
+  <a href="#about" data-sec="about"><span class="lbl">About</span><span class="pip"></span></a>
+  <a href="#services" data-sec="services"><span class="lbl">Services</span><span class="pip"></span></a>
+  <a href="#products" data-sec="products"><span class="lbl">Products</span><span class="pip"></span></a>
+  <a href="#why" data-sec="why"><span class="lbl">Why Us</span><span class="pip"></span></a>
+  <a href="#contact" data-sec="contact"><span class="lbl">Contact</span><span class="pip"></span></a>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="pill"><span class="dot"></span> Global IT Consulting &amp; AI-Native Solutions</span>
+      <h1>Engineering <span class="grad">Intelligence.</span><br/>Accelerating Enterprise.</h1>
+      <p class="lead">Velorithm Systems blends velocity and algorithm — delivering technology strategy, enterprise architecture, and AI-native products for global organizations.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Book a Consultation
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#products" class="btn btn-ghost">Explore Our Products</a>
+      </div>
+      <div class="trio">
+        <div><div class="t">Global Delivery</div><div class="s">Worldwide reach</div></div>
+        <div><div class="t">AI-Native</div><div class="s">Engineered core</div></div>
+        <div><div class="t">Enterprise-Grade</div><div class="s">Built to scale</div></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 400 400" aria-hidden="true">
+        <g class="ring-rot"><circle cx="200" cy="200" r="172" fill="none" stroke="rgba(217,164,65,.16)" stroke-width="1" stroke-dasharray="3 9"/></g>
+        <circle cx="200" cy="200" r="138" fill="none" stroke="rgba(217,164,65,.09)" stroke-width="1"/>
+        <circle cx="200" cy="200" r="104" fill="none" stroke="rgba(217,164,65,.06)" stroke-width="1"/>
+        <g stroke="rgba(217,164,65,.22)" stroke-width="1.5">
+          <line x1="200" y1="28" x2="200" y2="44"/><line x1="200" y1="356" x2="200" y2="372"/>
+          <line x1="28" y1="200" x2="44" y2="200"/><line x1="356" y1="200" x2="372" y2="200"/>
+        </g>
+        <path d="M118 124 L200 304 L282 124" fill="none" stroke="url(#vg)" stroke-width="20" stroke-linecap="round" stroke-linejoin="round"/>
+        <path class="pulse" d="M118 124 L200 304 L282 124" fill="none" stroke="#FBEFCF" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" opacity=".75"/>
+        <path class="pulse two" d="M282 124 L200 304 L118 124" fill="none" stroke="#F0DDAE" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" opacity=".6"/>
+        <path d="M200 304 L200 342" fill="none" stroke="#C2682F" stroke-width="3" stroke-linecap="round" stroke-dasharray="3 8"/>
+        <circle cx="118" cy="124" r="12" fill="url(#ng)"/><circle class="node-b" cx="118" cy="124" r="22" fill="rgba(232,193,112,.16)"/>
+        <circle cx="282" cy="124" r="12" fill="url(#ng)"/><circle class="node-b" cx="282" cy="124" r="22" fill="rgba(232,193,112,.16)"/>
+        <circle cx="200" cy="304" r="15" fill="url(#ng)"/><circle cx="200" cy="304" r="6" fill="#FBF3DF"/>
+        <circle cx="200" cy="344" r="6" fill="#C2682F"/>
+        <circle class="node-b" cx="320" cy="250" r="3.5" fill="#E8C170"/>
+        <circle class="node-b" cx="80" cy="270" r="3" fill="#C2682F"/>
+        <circle class="node-b" cx="150" cy="70" r="3" fill="#E8C170"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section why" id="about">
+  <span class="idx">01</span>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">About Velorithm</span>
+      <h2>Built where strategy meets velocity.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:start;" class="about-wrap">
+      <div class="reveal" style="display:grid;gap:18px;">
+        <p style="color:#c9c0b4;font-size:1.08rem;">Velorithm Systems is a global IT consulting and solutions provider. Our name fuses <strong style="color:var(--text);">velocity</strong> and <strong style="color:var(--text);">algorithm</strong> — a promise of speed, intelligence, and precision in everything we ship.</p>
+        <p style="color:#b9b0a4;">We partner with enterprises navigating digital transformation, modernizing their architecture, and embedding AI into the core of how they operate. From the first strategy session to a system running in production, we move fast without sacrificing rigor.</p>
+        <p style="color:#b9b0a4;">Our founding philosophy is simple: technology should accelerate the business, not slow it down. We pair deep human expertise with AI-native engineering to deliver outcomes that scale across borders and business units.</p>
+      </div>
+      <div class="reveal d1" style="background:linear-gradient(160deg,var(--surface),var(--surface-2));border:1px solid var(--border);border-radius:16px;padding:32px;">
+        <div style="display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--border);"><span style="font-family:var(--display);font-weight:700;color:var(--amber);font-size:1.4rem;min-width:64px;">Global</span><span><strong style="display:block;color:var(--text);">Reach</strong><span style="color:var(--muted);font-size:.9rem;">Cross-border delivery teams serving enterprise clients worldwide.</span></span></div>
+        <div style="display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--border);"><span style="font-family:var(--display);font-weight:700;color:var(--amber);font-size:1.4rem;min-width:64px;">AI</span><span><strong style="display:block;color:var(--text);">Native</strong><span style="color:var(--muted);font-size:.9rem;">Intelligence engineered into every layer of the enterprise.</span></span></div>
+        <div style="display:flex;gap:14px;padding:16px 0;"><span style="font-family:var(--display);font-weight:700;color:var(--amber);font-size:1.4rem;min-width:64px;">Trust</span><span><strong style="display:block;color:var(--text);">Promise</strong><span style="color:var(--muted);font-size:.9rem;">Precision instruments for serious organizations.</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section" id="services">
+  <span class="idx">02</span>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">IT Consulting</span>
+      <h2>Services that move the enterprise forward.</h2>
+      <p>End-to-end consulting — from boardroom strategy to systems running in production.</p>
+    </div>
+    <div class="bento">
+      <div class="tile feature reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.5 2.5M16.5 16.5L19 19M19 5l-2.5 2.5M7.5 16.5L5 19"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>Digital Transformation</h3>
+        <p>Reimagine operating models and customer experiences with a roadmap built for measurable, lasting change — orchestrated end to end and delivered at velocity.</p>
+      </div>
+      <div class="tile s2 reveal d1">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h1a3 3 0 010 6h-1M6 10H5a3 3 0 000 6h1"/><path d="M12 2v4M9 16h6M12 12v8"/><circle cx="12" cy="8" r="2.5"/></svg></div>
+        <h3>Cloud Architecture</h3>
+        <p>Resilient, scalable systems engineered for performance and cost discipline.</p>
+      </div>
+      <div class="tile s2 reveal d2">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9zM4 10h-2M22 10h-2M4 14h-2M22 14h-2M10 4v-2M14 4v-2M10 22v-2M14 22v-2"/></svg></div>
+        <h3>AI Integration</h3>
+        <p>Embed AI agents and intelligent automation into existing workflows — securely.</p>
+      </div>
+      <div class="tile wide reveal d1">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <div class="txt"><h3>Managed Solutions</h3><p>Ongoing operations, monitoring, and optimization — keeping your platforms fast, secure, and reliable long after launch.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRODUCTS ============ -->
+<section class="section why" id="products">
+  <span class="idx">03</span>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our Products</span>
+      <h2>AI-native platforms, built in-house.</h2>
+      <p>Beyond consulting, we build products that put intelligent automation in the hands of the teams who need it.</p>
+    </div>
+    <div class="prod-grid">
+      <div class="dossier reveal">
+        <div class="pcode">PRODUCT — P/01</div>
+        <div class="visual">
+          <svg viewBox="0 0 320 120" preserveAspectRatio="xMidYMid meet">
+            <g stroke="rgba(217,164,65,.45)" stroke-width="1.5" fill="none">
+              <circle cx="60" cy="60" r="10" fill="rgba(217,164,65,.13)"/>
+              <circle cx="160" cy="35" r="8" fill="rgba(194,104,47,.13)"/>
+              <circle cx="160" cy="85" r="8" fill="rgba(194,104,47,.13)"/>
+              <circle cx="260" cy="60" r="10" fill="rgba(217,164,65,.13)"/>
+              <path d="M70 58 L152 38 M70 64 L152 82 M168 35 L252 56 M168 85 L252 64"/>
+            </g>
+            <circle cx="60" cy="60" r="3" fill="#E8C170"/><circle cx="260" cy="60" r="3" fill="#E8C170"/>
+          </svg>
+        </div>
+        <div class="phead"><h3>AI Agent Platform</h3><span class="badge flag">Flagship</span></div>
+        <p class="lead">Enterprise reporting automation, powered by AI agents — automating complex data pipelines, generating boardroom-ready reports, and surfacing insights across every business unit.</p>
+        <ul class="feat">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Autonomous agents that build and run data pipelines</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Automated insights surfaced across business units</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Enterprise-grade security and access controls</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Integrates with your existing data stack</li>
+        </ul>
+        <div class="pcta"><a href="#contact" class="btn btn-ghost">Request a Demo</a></div>
+      </div>
+      <div class="dossier reveal d1">
+        <div class="pcode">PRODUCT — P/02</div>
+        <div class="visual">
+          <svg viewBox="0 0 320 120" preserveAspectRatio="xMidYMid meet">
+            <g fill="rgba(217,164,65,.16)" stroke="rgba(217,164,65,.38)" stroke-width="1">
+              <rect x="40" y="48" width="34" height="24" rx="3"/><rect x="84" y="48" width="22" height="24" rx="3"/>
+              <rect x="116" y="48" width="40" height="24" rx="3"/><rect x="166" y="48" width="26" height="24" rx="3"/>
+              <rect x="202" y="48" width="44" height="24" rx="3"/><rect x="256" y="48" width="24" height="24" rx="3"/>
+            </g>
+            <line x1="160" y1="30" x2="160" y2="90" stroke="#C2682F" stroke-width="2"/>
+            <circle cx="160" cy="30" r="3.5" fill="#E8C170"/>
+          </svg>
+        </div>
+        <div class="phead"><h3>ClipCraft</h3><span class="badge soon">Coming Soon</span></div>
+        <p class="lead">An AI-powered video editing tool for content teams — intelligent clip selection, automated timelines, and smart export, so creators ship more, faster.</p>
+        <ul class="feat">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Smart clip selection from raw footage</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Timeline automation that assembles the first cut</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Built for team collaboration and review</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg> Smart export presets for every platform</li>
+        </ul>
+        <div class="pcta"><a href="#contact" class="btn btn-ghost">Join the Waitlist</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY ============ -->
+<section class="section" id="why">
+  <span class="idx">04</span>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why Velorithm</span>
+      <h2>The difference is in the engineering.</h2>
+      <p>The reach of a global consultancy with the speed and intelligence of an AI-native product company.</p>
+    </div>
+    <div class="ledger">
+      <div class="lrow reveal"><div class="n">01</div><h3>Global Delivery</h3><p>Distributed teams across regions deliver continuity, scale, and local context wherever you operate.</p></div>
+      <div class="lrow reveal"><div class="n">02</div><h3>Enterprise Reliability</h3><p>Security, governance, and uptime engineered to meet the standards of the world's most demanding organizations.</p></div>
+      <div class="lrow reveal"><div class="n">03</div><h3>AI-Native Approach</h3><p>AI isn't bolted on — it's the foundation of how we architect, automate, and accelerate every engagement.</p></div>
+      <div class="lrow reveal"><div class="n">04</div><h3>Human Expertise</h3><p>Seasoned architects and strategists guide every system — the judgment automation alone can't replace.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="section why" id="contact">
+  <span class="idx">05</span>
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-left reveal">
+        <span class="eyebrow">Start a Project</span>
+        <h2>Let's build something at velocity.</h2>
+        <p>Tell us where you're headed — a transformation roadmap, a cloud rebuild, or putting AI agents to work. We'll help you get there faster.</p>
+        <div class="info">
+          <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="M22 6l-10 7L2 6"/></svg> hello@velorithmsystems.com</div>
+          <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20 15 15 0 010-20"/></svg> Global delivery — engagements worldwide</div>
+          <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg> Response within one business day</div>
+        </div>
+      </div>
+      <form id="contactForm" novalidate class="reveal d1" action="/api/contact" method="POST">
+        <div class="form-msg" id="formMsg" role="status" aria-live="polite"></div>
+        <!-- honeypot: bots fill this, humans never see it -->
+        <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
+        <div class="frow">
+          <div class="field"><label for="name">Name</label><input type="text" id="name" name="name" placeholder="Jane Doe" required /></div>
+          <div class="field"><label for="company">Company</label><input type="text" id="company" name="company" placeholder="Acme Corp" /></div>
+        </div>
+        <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="jane@company.com" required /></div>
+        <div class="field"><label for="service">Service Interest</label>
+          <select id="service" name="service">
+            <option value="" disabled selected>Select a service…</option>
+            <option>IT Consulting &amp; Strategy</option>
+            <option>Digital Transformation</option>
+            <option>Cloud Architecture</option>
+            <option>AI Integration</option>
+            <option>AI Agent Platform</option>
+            <option>ClipCraft (Waitlist)</option>
+            <option>Managed Solutions</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us about your project…" required></textarea></div>
+        <button type="submit" class="btn btn-primary" id="submitBtn">Start a Project
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <p class="form-note">Sends securely via our Cloudflare backend. We typically reply within one business day.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a href="#hero" class="brand" aria-label="Velorithm Systems home">
+          <svg class="mark" viewBox="0 0 120 120" aria-hidden="true">
+            <rect x="6" y="6" width="108" height="108" rx="30" fill="#1A1512" stroke="#D9A441" stroke-opacity=".26" stroke-width="1.4"/>
+            <path d="M40 36 L60 84 L80 36" fill="none" stroke="url(#vg)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="40" cy="36" r="5" fill="url(#ng)"/><circle cx="80" cy="36" r="5" fill="url(#ng)"/>
+            <circle cx="60" cy="84" r="6" fill="url(#ng)"/><circle cx="60" cy="84" r="2.4" fill="#FBF3DF"/>
+          </svg>
+          <span class="logo-text"><span class="a">Velorithm</span><span class="b">SYSTEMS LTD</span></span>
+        </a>
+        <p>Global IT consulting and AI-native solutions, delivered at velocity. From strategy to system, engineered with rigor.</p>
+      </div>
+      <div class="foot-col"><h4>Company</h4><a href="#about">About</a><a href="#why">Why Velorithm</a><a href="#contact">Contact</a></div>
+      <div class="foot-col"><h4>Services</h4><a href="#services">Digital Transformation</a><a href="#services">Cloud Architecture</a><a href="#services">AI Integration</a><a href="#services">Managed Solutions</a></div>
+      <div class="foot-col"><h4>Products</h4><a href="#products">AI Agent Platform</a><a href="#products">ClipCraft</a></div>
+    </div>
+    <div class="foot-bottom">
+      <p>&copy; <span id="year"></span> Velorithm Systems Ltd. All rights reserved.</p>
+      <div class="socials">
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2" fill="none"/></svg></a>
+        <a href="#" aria-label="X"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+        <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0019 5.77 5.07 5.07 0 0018.91 2S17.73 1.65 15 3.48a13.38 13.38 0 00-7 0C5.27 1.65 4.09 2 4.09 2A5.07 5.07 0 004 5.77 5.44 5.44 0 002.5 9.5c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 008 19.13V23"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 20);
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  hamburger.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+  });
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navLinks.classList.remove('open'); hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', false);
+  }));
+
+  const io = new IntersectionObserver((es) => {
+    es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, {threshold:0.12, rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  const dotLinks = Array.from(document.querySelectorAll('.dots a'));
+  const secObserver = new IntersectionObserver((es) => {
+    es.forEach(e => { if(e.isIntersecting){ dotLinks.forEach(d => d.classList.toggle('active', d.dataset.sec === e.target.id)); } });
+  }, {threshold:0.5});
+  ['about','services','products','why','contact'].forEach(id => {
+    const el = document.getElementById(id); if(el) secObserver.observe(el);
+  });
+
+  // ----- Contact form: POST to Cloudflare Pages Function -----
+  const form = document.getElementById('contactForm');
+  const msg = document.getElementById('formMsg');
+  const submitBtn = document.getElementById('submitBtn');
+  function showMsg(kind, text){ msg.className = 'form-msg ' + kind; msg.textContent = text; }
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if(!form.checkValidity()){ form.reportValidity(); return; }
+    const payload = Object.fromEntries(new FormData(form).entries());
+    submitBtn.disabled = true;
+    const original = submitBtn.textContent;
+    submitBtn.textContent = 'Sending…';
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      if(res.ok){
+        showMsg('ok', 'Thanks — your message has been sent. We’ll be in touch within one business day.');
+        form.reset();
+      } else {
+        const data = await res.json().catch(() => ({}));
+        showMsg('err', data.error || 'Something went wrong sending your message. Please email hello@velorithmsystems.com directly.');
+      }
+    } catch (err) {
+      showMsg('err', 'Network error — please check your connection or email hello@velorithmsystems.com directly.');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = original.trim();
+      msg.scrollIntoView({behavior:'smooth', block:'center'});
+    }
+  });
+</script>
+</body>
+</html>
