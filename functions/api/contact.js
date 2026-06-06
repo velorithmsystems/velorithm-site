@@ -7,8 +7,8 @@
  *   Settings -> Environment variables, or via `wrangler pages secret put`):
  *
  *   RESEND_API_KEY   Your Resend API key (starts with "re_").
- *   CONTACT_TO       Where submissions are delivered, e.g. hello@velorithmsystems.com
- *   CONTACT_FROM     A verified Resend sender, e.g. "Velorithm Website <noreply@velorithmsystems.com>"
+ *   CONTACT_TO       Where submissions are delivered, e.g. info@velogorithm.com
+ *   CONTACT_FROM     A verified Resend sender, e.g. "Velogorithm <noreply@send.velogorithm.com>"
  *                    (the domain must be verified in your Resend account)
  *
  * Notes:
